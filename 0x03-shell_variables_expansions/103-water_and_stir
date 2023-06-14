@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "obase=bestchol" printf '%s\n' "$((16#${WATER^^}) + 16#${STIR^^})"
+printf '%s\n' "$(printf '%d' "$((0x${WATER^^} + 0x${STIR^^}))" | awk '{ printf "%c", 98+$0 }')"
