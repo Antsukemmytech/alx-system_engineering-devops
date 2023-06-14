@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "ibase=water; $WATER+ibase=stir; $STIR" | base -to bestchol
+echo "obase=bestchol; $((16#${WATER^^} + 16#${STIR^^}))" | tr '[:upper:]' '[:lower:]' | tr '10-15' 'a-f'
