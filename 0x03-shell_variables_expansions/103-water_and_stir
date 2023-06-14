@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "obase=bestchol; $((16#${WATER^^} + 16#${STIR^^}))" | tr '[:upper:]' '[:lower:]' | tr '10-15' 'a-f'
+echo "obase=bestchol" printf '%s\n' "$((16#${WATER^^}) + 16#${STIR^^})"
