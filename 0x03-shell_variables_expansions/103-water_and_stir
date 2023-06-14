@@ -1,2 +1,2 @@
 #!/bin/bash
-printf '%s\n' "$(printf '%d' "$((0x${WATER^^} + 0x${STIR^^}))" | awk '{ printf "%c", 98+$0 }')"
+printf '%b' "$(printf '%o' $((98 + 0x${WATER^^} + 0x${STIR^^})))"
