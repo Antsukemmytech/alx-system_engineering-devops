@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#display listening script
+#shows listening sockets
+#shows the PID and name of the program to which each socket belongs
+netstat -1 -p
