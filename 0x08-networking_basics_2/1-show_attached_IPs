@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#displays all active IPv4 IPs on the machine it’s executed on
+ipv4_addresses=$(ifconfig | grep -oP '(?<=inet )(\d+\.\d+\.\d+\.\d+)' | grep -v '127.0.0.1')
+echo "$ipv4_addresses"
